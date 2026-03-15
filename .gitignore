@@ -47,3 +47,21 @@ app.*.map.json
 .env
 .env.local
 .env.*.local
+
+# Firebase configuration files (contain sensitive project IDs)
+android/app/google-services.json
+ios/Runner/GoogleService-Info.plist
+
+# Temporary test and verification files
+test_*.dart
+verify_*.dart
+*_COMPLETION_REPORT.md
+*_FINAL_REPORT.md
+*_verification_report.md
+
+# Internal documentation (keep only README.md public)
+docs/
+!docs/README.md
+ARCHITECTURE.md
+SETUP_COMPLETE.md
+*_GUIDE.md
