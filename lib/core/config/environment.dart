@@ -1,3 +1,9 @@
+/// Environment configuration for the Divvy app
+///
+/// Update the API base URLs below to match your backend deployment:
+/// - Development: Local backend (default: http://127.0.0.1:8000)
+/// - Staging: Staging server URL
+/// - Production: Production server URL
 enum Environment { development, staging, production }
 
 class EnvironmentConfig {
@@ -9,13 +15,18 @@ class EnvironmentConfig {
     _currentEnvironment = environment;
   }
 
+  /// API Base URL configuration
+  /// Update these URLs to match your backend deployment
   static String get apiBaseUrl {
     switch (_currentEnvironment) {
       case Environment.development:
+        // Local development - update if your backend runs on a different port
         return 'http://127.0.0.1:8000';
       case Environment.staging:
+        // Staging server - update with your staging URL
         return 'https://staging-api.divvy.com';
       case Environment.production:
+        // Production server - update with your production URL
         return 'https://api.divvy.com';
     }
   }
