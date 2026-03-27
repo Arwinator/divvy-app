@@ -1,8 +1,8 @@
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 import 'dart:async';
-import '../storage/secure_storage.dart';
-import '../config/environment.dart';
+import 'package:divvy/core/storage/secure_storage.dart';
+import 'package:divvy/core/config/environment.dart';
 
 class ApiException implements Exception {
   final String message;

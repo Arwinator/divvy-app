@@ -1,5 +1,5 @@
-import '../../models/user_model.dart';
-import '../../../core/storage/database_helper.dart';
+import 'package:divvy/data/models/models.dart';
+import 'package:divvy/core/storage/database_helper.dart';
 
 /// Local data source for User operations using SQLite
 class UserLocalDataSource {

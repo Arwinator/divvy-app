@@ -1,5 +1,5 @@
-import '../../models/transaction_model.dart';
-import '../../../core/storage/database_helper.dart';
+import 'package:divvy/data/models/models.dart';
+import 'package:divvy/core/storage/database_helper.dart';
 
 /// Local data source for Transaction operations using SQLite
 class TransactionLocalDataSource {

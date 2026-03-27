@@ -1,5 +1,5 @@
-import '../../../core/network/api_client.dart';
-import '../../../core/constants/api_constants.dart';
+import 'package:divvy/core/network/api_client.dart';
+import 'package:divvy/core/constants/api_constants.dart';
 
 /// Sync operation to be sent to the server
 class SyncOperation {

@@ -1,5 +1,5 @@
-import '../../../core/network/api_client.dart';
-import '../../../core/constants/api_constants.dart';
+import 'package:divvy/core/network/api_client.dart';
+import 'package:divvy/core/constants/api_constants.dart';
 
 /// Payment intent response from PayMongo
 class PaymentIntentResponse {

@@ -1,6 +1,6 @@
-import '../../../core/network/api_client.dart';
-import '../../../core/constants/api_constants.dart';
-import '../../models/bill_model.dart';
+import 'package:divvy/core/network/api_client.dart';
+import 'package:divvy/core/constants/api_constants.dart';
+import 'package:divvy/data/models/models.dart';
 
 /// Remote data source for bill management operations
 class BillRemoteDataSource {

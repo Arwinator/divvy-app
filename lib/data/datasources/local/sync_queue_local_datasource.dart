@@ -1,5 +1,5 @@
 import 'dart:convert';
-import '../../../core/storage/database_helper.dart';
+import 'package:divvy/core/storage/database_helper.dart';
 
 /// Model for sync queue operations
 class SyncOperation {

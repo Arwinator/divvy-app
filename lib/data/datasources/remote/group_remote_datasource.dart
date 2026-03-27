@@ -1,6 +1,6 @@
-import '../../../core/network/api_client.dart';
-import '../../../core/constants/api_constants.dart';
-import '../../models/group_model.dart';
+import 'package:divvy/core/network/api_client.dart';
+import 'package:divvy/core/constants/api_constants.dart';
+import 'package:divvy/data/models/models.dart';
 
 /// Invitation response from API
 class InvitationResponse {
