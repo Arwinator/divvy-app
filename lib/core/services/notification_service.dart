@@ -12,7 +12,7 @@ import 'package:device_info_plus/device_info_plus.dart';
 /// - Background notification handling
 /// - Notification tap handling and navigation
 ///
-/// Requirements: 2.1, 9.5, 9.6
+
 class NotificationService {
   final FirebaseMessaging _firebaseMessaging = FirebaseMessaging.instance;
   final DeviceInfoPlugin _deviceInfo = DeviceInfoPlugin();
