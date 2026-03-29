@@ -55,6 +55,17 @@ class GroupRemoteDataSource {
     return groupsData.map((json) => GroupModel.fromJson(json)).toList();
   }
 
+  /// Get pending invitations for the authenticated user
+  /// GET /api/invitations
+  Future<List<InvitationModel>> getInvitations() async {
+    final response = await apiClient.get('/api/invitations');
+
+    final List<dynamic> invitationsData = response['data'];
+    return invitationsData
+        .map((json) => InvitationModel.fromJson(json))
+        .toList();
+  }
+
   /// Send an invitation to join a group
   /// POST /api/groups/{id}/invitations
   Future<InvitationResponse> sendInvitation({

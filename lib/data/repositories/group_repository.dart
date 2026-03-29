@@ -84,6 +84,18 @@ class GroupRepository {
     }
   }
 
+  /// Get pending invitations for current user
+  /// Requires online connection
+  Future<List<InvitationModel>> getInvitations() async {
+    final isConnected = await networkInfo.isConnected;
+
+    if (!isConnected) {
+      throw Exception('Cannot fetch invitations while offline');
+    }
+
+    return await remoteDataSource.getInvitations();
+  }
+
   /// Get a specific group by ID
   /// Returns from cache, syncs in background if online
   Future<GroupModel?> getGroup(int groupId) async {

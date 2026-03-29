@@ -12,11 +12,13 @@ class GroupViewModel extends ChangeNotifier {
 
   // State
   List<GroupModel> _groups = [];
+  List<InvitationModel> _invitations = [];
   bool _isLoading = false;
   String? _error;
 
   // Getters
   List<GroupModel> get groups => _groups;
+  List<InvitationModel> get invitations => _invitations;
   bool get isLoading => _isLoading;
   String? get error => _error;
 
@@ -28,6 +30,22 @@ class GroupViewModel extends ChangeNotifier {
 
     try {
       _groups = await _repository.getGroups();
+    } catch (e) {
+      _error = e.toString();
+    } finally {
+      _isLoading = false;
+      notifyListeners();
+    }
+  }
+
+  /// Load pending invitations for the current user
+  Future<void> loadInvitations() async {
+    _isLoading = true;
+    _error = null;
+    notifyListeners();
+
+    try {
+      _invitations = await _repository.getInvitations();
     } catch (e) {
       _error = e.toString();
     } finally {
@@ -97,6 +115,9 @@ class GroupViewModel extends ChangeNotifier {
         _groups.add(group);
       }
 
+      // Remove the invitation from the list
+      _invitations.removeWhere((inv) => inv.id == invitationId);
+
       _isLoading = false;
       notifyListeners();
       return true;
@@ -116,6 +137,10 @@ class GroupViewModel extends ChangeNotifier {
 
     try {
       await _repository.declineInvitation(invitationId: invitationId);
+
+      // Remove the invitation from the list
+      _invitations.removeWhere((inv) => inv.id == invitationId);
+
       _isLoading = false;
       notifyListeners();
       return true;
