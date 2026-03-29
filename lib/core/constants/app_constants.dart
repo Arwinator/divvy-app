@@ -1,29 +1,20 @@
 import 'package:flutter/material.dart';
 
+/// Application-wide constants for Divvy bill splitter app
+///
+/// This class contains non-theme constants like spacing, validation rules,
+/// messages, and configuration values. For colors and text styles, use
+/// Theme.of(context) to ensure proper light/dark mode support.
 class AppConstants {
+  // Private constructor to prevent instantiation
+  AppConstants._();
+
   // App Info
   static const String appName = 'Divvy';
   static const String appVersion = '1.0.0';
 
-  // Colors
-  static const Color primaryColor = Color(0xFF6366F1); // Indigo
-  static const Color secondaryColor = Color(0xFF8B5CF6); // Purple
-  static const Color successColor = Color(0xFF10B981); // Green
-  static const Color errorColor = Color(0xFFEF4444); // Red
-  static const Color warningColor = Color(0xFFF59E0B); // Amber
-  static const Color infoColor = Color(0xFF3B82F6); // Blue
-
-  static const Color backgroundColor = Color(0xFFF9FAFB);
-  static const Color surfaceColor = Color(0xFFFFFFFF);
-  static const Color textPrimaryColor = Color(0xFF111827);
-  static const Color textSecondaryColor = Color(0xFF6B7280);
-  static const Color borderColor = Color(0xFFE5E7EB);
-
-  // Status Colors
-  static const Color paidColor = Color(0xFF10B981); // Green
-  static const Color unpaidColor = Color(0xFFF59E0B); // Amber
-  static const Color pendingColor = Color(0xFF6B7280); // Gray
-  static const Color failedColor = Color(0xFFEF4444); // Red
+  // Theme Seed Color (used in AppTheme)
+  static const Color primaryColor = Color(0xFF009688); // Teal
 
   // Spacing
   static const double spacingXs = 4.0;
@@ -39,76 +30,6 @@ class AppConstants {
   static const double radiusLg = 12.0;
   static const double radiusXl = 16.0;
   static const double radiusFull = 9999.0;
-
-  // Font Sizes
-  static const double fontSizeXs = 12.0;
-  static const double fontSizeSm = 14.0;
-  static const double fontSizeMd = 16.0;
-  static const double fontSizeLg = 18.0;
-  static const double fontSizeXl = 20.0;
-  static const double fontSize2xl = 24.0;
-  static const double fontSize3xl = 30.0;
-
-  // Font Weights
-  static const FontWeight fontWeightNormal = FontWeight.w400;
-  static const FontWeight fontWeightMedium = FontWeight.w500;
-  static const FontWeight fontWeightSemibold = FontWeight.w600;
-  static const FontWeight fontWeightBold = FontWeight.w700;
-
-  // Text Styles
-  static const TextStyle headingLarge = TextStyle(
-    fontSize: fontSize3xl,
-    fontWeight: fontWeightBold,
-    color: textPrimaryColor,
-  );
-
-  static const TextStyle headingMedium = TextStyle(
-    fontSize: fontSize2xl,
-    fontWeight: fontWeightBold,
-    color: textPrimaryColor,
-  );
-
-  static const TextStyle headingSmall = TextStyle(
-    fontSize: fontSizeXl,
-    fontWeight: fontWeightSemibold,
-    color: textPrimaryColor,
-  );
-
-  static const TextStyle bodyLarge = TextStyle(
-    fontSize: fontSizeLg,
-    fontWeight: fontWeightNormal,
-    color: textPrimaryColor,
-  );
-
-  static const TextStyle bodyMedium = TextStyle(
-    fontSize: fontSizeMd,
-    fontWeight: fontWeightNormal,
-    color: textPrimaryColor,
-  );
-
-  static const TextStyle bodySmall = TextStyle(
-    fontSize: fontSizeSm,
-    fontWeight: fontWeightNormal,
-    color: textSecondaryColor,
-  );
-
-  static const TextStyle labelLarge = TextStyle(
-    fontSize: fontSizeMd,
-    fontWeight: fontWeightMedium,
-    color: textPrimaryColor,
-  );
-
-  static const TextStyle labelMedium = TextStyle(
-    fontSize: fontSizeSm,
-    fontWeight: fontWeightMedium,
-    color: textPrimaryColor,
-  );
-
-  static const TextStyle labelSmall = TextStyle(
-    fontSize: fontSizeXs,
-    fontWeight: fontWeightMedium,
-    color: textSecondaryColor,
-  );
 
   // Animation Durations
   static const Duration animationFast = Duration(milliseconds: 150);
