@@ -48,7 +48,7 @@ class NotificationService {
       if (kDebugMode) {
         print('FCM Token refreshed: $newToken');
       }
-      // TODO: Update token on server when auth is implemented
+      // Token updates are handled by AuthViewModel during login/registration
     });
 
     // Handle foreground notifications

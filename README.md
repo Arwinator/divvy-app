@@ -61,10 +61,30 @@ static const String apiBaseUrl = 'http://your-api-url/api';
 
 **Firebase Configuration**
 
-- Download `google-services.json` (Android) from Firebase Console
-- Place it in `android/app/`
-- Download `GoogleService-Info.plist` (iOS) from Firebase Console
-- Place it in `ios/Runner/`
+1. Create a Firebase project at [Firebase Console](https://console.firebase.google.com/)
+
+2. **Android Setup:**
+   - Download `google-services.json` from Firebase Console
+   - Place it in `android/app/`
+
+3. **iOS Setup (if building for iOS):**
+   - Download `GoogleService-Info.plist` from Firebase Console
+   - Place it in `ios/Runner/`
+
+4. **Generate Firebase Options:**
+   - Copy `lib/firebase_options.dart.example` to `lib/firebase_options.dart`
+   - Run `flutterfire configure` to auto-generate configuration
+   - OR manually fill in your Firebase project details in `firebase_options.dart`
+
+   ```dart
+   static const FirebaseOptions android = FirebaseOptions(
+     apiKey: 'YOUR_API_KEY',
+     appId: 'YOUR_APP_ID',
+     messagingSenderId: 'YOUR_SENDER_ID',
+     projectId: 'YOUR_PROJECT_ID',
+     storageBucket: 'YOUR_STORAGE_BUCKET',
+   );
+   ```
 
 Run the app:
 
