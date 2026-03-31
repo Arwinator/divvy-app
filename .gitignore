@@ -124,19 +124,12 @@ lib/firebase_options.dart
 # Temporary test and verification files
 test_*.dart
 verify_*.dart
-*_COMPLETION_REPORT.md
-*_FINAL_REPORT.md
-*_verification_report.md
-
-# Internal documentation (keep only README.md public)
-docs/
-!docs/README.md
-ARCHITECTURE.md
-SETUP_COMPLETE.md
-*_GUIDE.md
 
 # Exceptions to above rules
 !**/ios/**/default.mode1v3
 !**/ios/**/default.mode2v3
 !**/ios/**/default.pbxuser
 !**/ios/**/default.perspectivev3
+
+# Internal documentation
+docs/
