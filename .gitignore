@@ -121,9 +121,9 @@ android/app/google-services.json
 ios/Runner/GoogleService-Info.plist
 lib/firebase_options.dart
 
-# Temporary test and verification files
-test_*.dart
-verify_*.dart
+
+# Mockito generated mock files
+*.mocks.dart
 
 # Exceptions to above rules
 !**/ios/**/default.mode1v3
