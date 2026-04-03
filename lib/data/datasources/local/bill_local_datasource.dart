@@ -158,6 +158,7 @@ extension BillModelExtension on BillModel {
     String? title,
     double? totalAmount,
     DateTime? billDate,
+    DateTime? createdAt,
     List<ShareModel>? shares,
     bool? isSynced,
   }) {
@@ -168,6 +169,7 @@ extension BillModelExtension on BillModel {
       title: title ?? this.title,
       totalAmount: totalAmount ?? this.totalAmount,
       billDate: billDate ?? this.billDate,
+      createdAt: createdAt ?? this.createdAt,
       shares: shares ?? this.shares,
       isSynced: isSynced ?? this.isSynced,
     );

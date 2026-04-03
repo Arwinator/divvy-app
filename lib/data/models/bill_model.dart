@@ -8,6 +8,7 @@ class BillModel {
   final String title;
   final double totalAmount;
   final DateTime billDate;
+  final DateTime createdAt;
   final List<ShareModel> shares;
   final bool isSynced;
 
@@ -18,6 +19,7 @@ class BillModel {
     required this.title,
     required this.totalAmount,
     required this.billDate,
+    required this.createdAt,
     required this.shares,
     this.isSynced = true,
   });
@@ -42,6 +44,7 @@ class BillModel {
       title: json['title'],
       totalAmount: (json['total_amount'] as num).toDouble(),
       billDate: DateTime.parse(json['bill_date']),
+      createdAt: DateTime.parse(json['created_at']),
       shares: (json['shares'] as List)
           .map((s) => ShareModel.fromJson(s))
           .toList(),
@@ -57,6 +60,7 @@ class BillModel {
       'title': title,
       'total_amount': totalAmount,
       'bill_date': billDate.toIso8601String().split('T')[0], // Date only
+      'created_at': createdAt.toIso8601String(),
       'shares': shares.map((s) => s.toJson()).toList(),
     };
   }
@@ -70,6 +74,7 @@ class BillModel {
       title: map['title'],
       totalAmount: map['total_amount'],
       billDate: DateTime.parse(map['bill_date']),
+      createdAt: DateTime.parse(map['created_at']),
       shares: [], // Shares loaded separately via join
       isSynced: map['is_synced'] == 1,
     );
@@ -84,6 +89,7 @@ class BillModel {
       'title': title,
       'total_amount': totalAmount,
       'bill_date': billDate.toIso8601String().split('T')[0], // Date only
+      'created_at': createdAt.toIso8601String(),
       'is_synced': isSynced ? 1 : 0,
     };
   }
