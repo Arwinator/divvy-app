@@ -102,9 +102,23 @@ flutter run
 
 ## Testing
 
+### Running Tests
+
 ```bash
 flutter test
 ```
+
+### First-Time Setup for Tests
+
+If you've just cloned the repository, you need to generate mock files for unit tests:
+
+```bash
+dart run build_runner build
+```
+
+This generates `.mocks.dart` files needed by the test suite. These files are auto-generated and excluded from version control (`.gitignore`).
+
+**Note:** You only need to run this once after cloning, or when adding new tests that use `@GenerateMocks`.
 
 ## Building
 
